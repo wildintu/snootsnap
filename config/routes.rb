@@ -28,7 +28,7 @@ Rails.application.routes.draw do
     end
 
     # Nested Snap Reaction
-    resources :snap_reactions, only: [:create, :destroy]
+    resources :snap_reactions, only: [ :create, :destroy ]
   end
 
   # Meetups
@@ -39,14 +39,14 @@ Rails.application.routes.draw do
     end
 
     # Nested Meetup Attendance
-    resource :meetup_attendance, only: [:create, :destroy]
+    resource :meetup_attendance, only: [ :create, :destroy ]
 
     # Nested feedback form
     resources :trust_feedbacks, only: [:create]
   end
 
   # Parks (optional)
-  resources :parks, only: [:index, :show]
+  resources :parks, only: [ :index, :show ]
 
   # You can add authentication routes here later (Devise)
   # devise_for :users

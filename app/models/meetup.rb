@@ -1,5 +1,5 @@
 class Meetup < ApplicationRecord
-  belongs_to :organizer, class_name: 'User'
+  belongs_to :organizer, class_name: "User"
   has_many :meetup_attendances
   has_many :attendees, through: :meetup_attendances, source: :user
   has_many :snaps
