@@ -27,7 +27,7 @@ Rails.application.routes.draw do
       patch :highlight  # /snaps/:id/highlight
     end
 
-    #Nested Snap Reaction
+    # Nested Snap Reaction
     resources :snap_reactions, only: [:create, :destroy]
   end
 
@@ -38,7 +38,7 @@ Rails.application.routes.draw do
       delete :leave      # /meetups/:id/leave
     end
 
-    #Nested Meetup Attendance
+    # Nested Meetup Attendance
     resource :meetup_attendance, only: [:create, :destroy]
 
     # Nested feedback form

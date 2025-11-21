@@ -39,4 +39,3 @@ class SnapsController < ApplicationController
     params.require(:snap).permit(:caption, :image, :expires_at, :meetup_id)
   end
 end
-

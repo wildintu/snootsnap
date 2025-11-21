@@ -1,5 +1,5 @@
 class MeetupsController < ApplicationController
-  before_action :set_meetup, only: [:show, :edit, :update, :destroy, :join, :leave]
+  before_action :set_meetup, only: [ :show, :edit, :update, :destroy, :join, :leave ]
 
   def index
     @meetups = Meetup.order(start_time: :asc)
