@@ -42,7 +42,7 @@ Rails.application.routes.draw do
     resource :meetup_attendance, only: [ :create, :destroy ]
 
     # Nested feedback form
-    resources :trust_feedbacks, only: [:create]
+    resources :trust_feedbacks, only: [ :create ]
   end
 
   # Parks (optional)
