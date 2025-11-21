@@ -1,0 +1,15 @@
+<div class="snap-story">
+  <% snaps.each do |snap| %>
+    <div class="snap-slide">
+      <% if snap.image.present? %>
+        <%= image_tag snap.image, alt: "Snap by #{snap.user.name}" %>
+      <% end %>
+      <p><%= snap.caption %></p>
+      <p class="snap-owner">— <%= link_to snap.user.name, user_path(snap.user) %></p>
+    </div>
+  <% end %>
+
+  <div class="snap-controls">
+    <%= button_to "Next Snap", "#", method: :get %>
+  </div>
+</div>

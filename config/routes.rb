@@ -11,4 +11,43 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "posts#index"
+
+  # Root path
+  root "snaps#index"
+
+  # Users
+  resources :users
+
+  # Dogs
+  resources :dogs
+
+  # Snaps
+  resources :snaps do
+    member do
+      patch :highlight  # /snaps/:id/highlight
+    end
+
+    #Nested Snap Reaction
+    resources :snap_reactions, only: [:create, :destroy]
+  end
+
+  # Meetups
+  resources :meetups do
+    member do
+      post :join         # /meetups/:id/join
+      delete :leave      # /meetups/:id/leave
+    end
+
+    #Nested Meetup Attendance
+    resource :meetup_attendance, only: [:create, :destroy]
+
+    # Nested feedback form
+    resources :trust_feedbacks, only: [:create]
+  end
+
+  # Parks (optional)
+  resources :parks, only: [:index, :show]
+
+  # You can add authentication routes here later (Devise)
+  # devise_for :users
 end

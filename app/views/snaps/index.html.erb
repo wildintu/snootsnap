@@ -1,0 +1,11 @@
+<h1>Snaps Feed</h1>
+<%= link_to "New Snap", new_snap_path %>
+
+<h2>Feed View</h2>
+<% @snaps.each do |snap| %>
+  <%= render "snap", snap: snap %>
+<% end %>
+
+<h2>Story View</h2>
+<%= render "story_view", snaps: @snaps %>
+

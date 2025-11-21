@@ -1,0 +1,23 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  description: MyText
+  start_time: 2025-11-20 14:24:50
+  end_time: 2025-11-20 14:24:50
+  latitude: 1.5
+  longitude: 1.5
+  dog_size_pref: MyString
+  dog_energy_pref: MyString
+  organizer: one
+
+two:
+  title: MyString
+  description: MyText
+  start_time: 2025-11-20 14:24:50
+  end_time: 2025-11-20 14:24:50
+  latitude: 1.5
+  longitude: 1.5
+  dog_size_pref: MyString
+  dog_energy_pref: MyString
+  organizer: two

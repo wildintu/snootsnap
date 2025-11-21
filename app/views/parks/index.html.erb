@@ -1,0 +1,7 @@
+<h1>Dog-Friendly Parks</h1>
+
+<ul>
+  <% @parks.each do |park| %>
+    <li><%= link_to park.name, park_path(park) %></li>
+  <% end %>
+</ul>

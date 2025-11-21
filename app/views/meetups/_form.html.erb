@@ -1,0 +1,23 @@
+<%= form_with(model: meetup) do |f| %>
+  <div>
+    <%= f.label :title %>
+    <%= f.text_field :title %>
+  </div>
+
+  <div>
+    <%= f.label :description %>
+    <%= f.text_area :description %>
+  </div>
+
+  <div>
+    <%= f.label :location_name %>
+    <%= f.text_field :location_name %>
+  </div>
+
+  <div>
+    <%= f.label :start_time %>
+    <%= f.datetime_select :start_time %>
+  </div>
+
+  <%= f.submit %>
+<% end %>

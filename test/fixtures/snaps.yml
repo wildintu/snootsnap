@@ -1,0 +1,19 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user: one
+  meetup: one
+  media: MyString
+  text: MyString
+  expires_at: 2025-11-20 14:25:39
+  latitude: 1.5
+  longitude: 1.5
+
+two:
+  user: two
+  meetup: two
+  media: MyString
+  text: MyString
+  expires_at: 2025-11-20 14:25:39
+  latitude: 1.5
+  longitude: 1.5

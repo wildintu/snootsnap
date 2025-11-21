@@ -1,0 +1,13 @@
+<%= form_with(model: snap) do |f| %>
+  <div>
+    <%= f.label :caption %>
+    <%= f.text_area :caption %>
+  </div>
+
+  <div>
+    <%= f.label :image %>
+    <%= f.text_field :image %>
+  </div>
+
+  <%= f.submit %>
+<% end %>

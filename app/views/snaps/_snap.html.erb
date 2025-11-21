@@ -1,0 +1,9 @@
+<div class="snap-card">
+  <% if snap.image.present? %>
+    <%= image_tag snap.image, alt: "Snap by #{snap.user.name}" %>
+  <% end %>
+  <p><%= snap.caption %></p>
+  <p>By <%= link_to snap.user.name, user_path(snap.user) %></p>
+
+  <%= button_to "React ❤️", snap_reactions_path(snap_id: snap.id) %>
+</div>

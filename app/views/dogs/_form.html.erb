@@ -1,0 +1,28 @@
+<%= form_with(model: dog) do |f| %>
+  <div>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </div>
+
+  <div>
+    <%= f.label :breed %>
+    <%= f.text_field :breed %>
+  </div>
+
+  <div>
+    <%= f.label :size %>
+    <%= f.select :size, ["small", "medium", "large"] %>
+  </div>
+
+  <div>
+    <%= f.label :energy_level %>
+    <%= f.select :energy_level, 1..5 %>
+  </div>
+
+  <div>
+    <%= f.label :photo %>
+    <%= f.text_field :photo %>
+  </div>
+
+  <%= f.submit %>
+<% end %>

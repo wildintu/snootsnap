@@ -1,0 +1,13 @@
+<h1><%= @dog.name %></h1>
+
+<p>Breed: <%= @dog.breed %></p>
+<p>Size: <%= @dog.size %></p>
+<p>Energy Level: <%= @dog.energy_level %></p>
+
+<% if @dog.photo.present? %>
+  <%= image_tag @dog.photo, alt: @dog.name %>
+<% end %>
+
+<p>Owner: <%= link_to @dog.user.name, user_path(@dog.user) %></p>
+
+<%= link_to "Edit Dog", edit_dog_path(@dog) %>

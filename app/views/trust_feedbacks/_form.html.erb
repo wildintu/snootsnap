@@ -1,0 +1,13 @@
+<%= form_with(model: [meetup, feedback]) do |f| %>
+  <div>
+    <%= f.label :rating %>
+    <%= f.select :rating, 1..5 %>
+  </div>
+
+  <div>
+    <%= f.label :comment %>
+    <%= f.text_area :comment %>
+  </div>
+
+  <%= f.submit "Submit Feedback" %>
+<% end %>
